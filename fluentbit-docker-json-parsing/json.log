@@ -1,0 +1,2 @@
+{"log":"{\"source_key\":\"first_level\",\"payload\":\"{\\\"payload_key\\\":\\\"second_level\\\"}\"}","docker_key":"this is a root field from the docker daemon"}
+{"log":"{\"source_key\":\"first_level\"}","docker_key":"this is a root field from the docker daemon"}
