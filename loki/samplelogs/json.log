@@ -1,3 +1,5 @@
+This log message is not json formatted
+{"log":"basic log","root_key":"this is a root field"}
 {"log":"{\"log_key\":\"first_level\"}","root_key":"this is a root field from the docker daemon"}
 {"log":"{\"log_key\":\"first_level\",\"payload\":\"{\\\"data\\\":{\\\"remade\\\":\\\"remade\\\"}}\"}","root_key":"this is a root field from the docker daemon"}
 {"log":"{\"log_key\":\"first_level\",\"payload\":\"{\\\"payload_key\\\":\\\"second_level\\\",\\\n\\\"payload_utf8_escaped\\\" : \\\"\u00E4\u00F6\u00FC\\\"}\"}","root_docker_key":"this is a root field from the docker daemon"}

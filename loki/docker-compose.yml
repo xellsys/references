@@ -1,0 +1,47 @@
+version: "3"
+
+networks:
+  loki:
+
+services:
+  loki:
+    image: grafana/loki:master
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - loki
+
+  promtail:
+    image: grafana/promtail:master
+    volumes:
+      - /var/log:/var/log
+    command: 
+      -config.file=/etc/promtail/docker-config.yaml
+    networks:
+      - loki
+      
+  grafana:
+    image: grafana/grafana:master
+    ports:
+      - "3000:3000"
+    environment:
+      GF_EXPLORE_ENABLED: "true"
+    volumes:
+    - ./conf/grafana/loki_ds.yml:/etc/grafana/provisioning/datasources/loki_ds.yml
+    networks:
+      - loki
+
+  testlogs:
+    build: postlogs/
+    depends_on:
+      - loki
+    networks:
+      - loki
+
+  pastash-loki:
+    image: qxip/pastash-loki
+    volumes:
+    - ./conf/pastash/pastash.conf:/pastash.conf
+    - ./samplelogs:/samplelogs:ro
+

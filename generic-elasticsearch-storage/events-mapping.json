@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "doc": {
+      "properties": {
+        "additionalData.BAC": {
+          "type": "double",
+          "ignore_malformed": true
+        },
+        "additionalData.BREATH_TEMPERATURE": {
+          "type": "double",
+          "ignore_malformed": true
+        }
+      }
+    }
+  }
+}

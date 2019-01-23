@@ -1,0 +1,11 @@
+{
+  "name": "http_requests_total",
+  "value": 1337,
+  "type": "Counter",
+  "timestamp": 1514719107,
+  "labels": {
+    "method": "GET",
+    "code": "200",
+    "path": "/login"
+  }
+}
