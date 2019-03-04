@@ -1,0 +1,10 @@
+FROM golang:alpine AS build
+
+ADD . /app
+RUN cd /app && go build -o goapp
+
+
+FROM scratch AS final
+
+COPY --from=build /app/goapp /goapp
+CMD ["./goapp"]
