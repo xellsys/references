@@ -1,0 +1,11 @@
+FROM alpine as build
+
+# those changes take long
+RUN sleep 10 && echo "basic changes" > artifact1
+RUN echo "dynamic changes at $(date)" > artifact2
+
+
+FROM alpine as final
+
+COPY --from=build artifact1 .
+COPY --from=build artifact2 .
