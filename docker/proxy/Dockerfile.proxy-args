@@ -1,0 +1,8 @@
+FROM appropriate/curl AS data
+
+ARG http_proxy
+
+RUN echo 'we get data from the internet'
+RUN curl https://raw.githubusercontent.com/xellsys/references/master/README.md > data
+
+ENTRYPOINT cat data
