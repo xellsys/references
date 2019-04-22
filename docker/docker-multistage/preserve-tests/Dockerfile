@@ -14,10 +14,7 @@ COPY --from=build artifact .
 FROM alpine as test
 LABEL type=test
 
-RUN echo 'NOK' > results
-RUN echo 'this is test log output'
 # tests fail
-RUN exit 1 
-
+RUN echo 'this is test log output: something is failing' &&  echo 'NOK' > results &&  exit 1
 
 FROM final
