@@ -1,0 +1,3 @@
+ARG DATA=data2
+
+FROM onbuild

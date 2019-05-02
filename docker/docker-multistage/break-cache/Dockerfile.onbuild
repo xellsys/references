@@ -1,0 +1,4 @@
+FROM alpine
+
+ONBUILD ARG DATA
+ONBUILD RUN echo "$DATA"
