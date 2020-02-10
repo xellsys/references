@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+
+  echo:
+    build: echo/
+    ports:
+      - 8080
+
+
+  caller:
+    image: appropriate/curl
+    command: -X GET http://echo:8080/hello -s
+    restart: always
