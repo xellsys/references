@@ -1,0 +1,20 @@
+# intellij
+**/*.iml
+**/.idea/
+**/out
+**/*.iws
+**/*.ipr
+
+
+# gradle
+**/.gradle
+**/build
+**/bin
+
+# Eclipse
+**/.classpath
+**/.project
+**/.settings
+
+*.jar
+**/.vscode

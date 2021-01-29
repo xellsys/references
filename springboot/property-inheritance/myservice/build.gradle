@@ -1,0 +1,11 @@
+plugins {
+    id 'org.springframework.boot' version "2.1.18.RELEASE"
+}
+
+bootJar {
+    baseName = 'myservice'
+}
+
+dependencies {
+    implementation project(':mylib')
+}

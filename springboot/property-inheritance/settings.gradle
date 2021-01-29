@@ -1,0 +1,4 @@
+rootProject.name = 'property-inheritance'
+
+include 'mylib'
+include 'myservice'
